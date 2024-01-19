@@ -1,0 +1,51 @@
+.body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 80px 1fr 80px;
+
+  margin: 0 auto;
+  max-width: 1240px;
+
+  font-family: 'Lora', serif;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+
+  transition: 0.5s;
+}
+
+.link:visited {
+  color: #000;
+}
+
+.link:hover {
+  color: navy;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 144px 1fr;
+  grid-column-gap: 50px;
+
+  padding: 30px 0;
+}
+
+.nav-list {
+  display: flex;
+  gap: 30px;
+
+  justify-self: end;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+}
