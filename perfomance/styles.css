@@ -32,6 +32,10 @@
   color: navy;
 }
 
+.header {
+  border-bottom: rgba(0, 0, 0, 0.2) 1px solid;
+}
+
 .nav {
   display: grid;
   grid-template-columns: 144px 1fr;
@@ -131,4 +135,17 @@ p {
   display: grid;
   grid-template-rows: repeat(2, auto);
   grid-row-gap: 30px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+
+  padding: 30px 0;
+
+  border-top: rgba(0, 0, 0, 0.2) 1px solid;
+}
+
+.footer-text {
+  justify-self: end;
 }
