@@ -118,3 +118,8 @@ img {
   line-height: 150%;
   font-weight: 600;
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
