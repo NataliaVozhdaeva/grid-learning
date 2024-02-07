@@ -1,2 +1,52 @@
+:root {
+  --text: #131312;
+  --hover: green;
+}
+
+* {
+  font-family: 'Manrope', sans-serif;
+  transition: 0.5s;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link,
+.link:visited {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.link:hover {
+  color: var(--hover);
+  font-weight: 600;
+}
+
+.body {
+  max-width: 1600px;
+  margin: 50px auto;
+}
+
+.header {
+  margin-bottom: 156px;
+}
+
+.nav {
+  display: flex;
+}
+
 .logo {
+  flex-grow: 1;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+
+  font-weight: 600;
+  font-size: 16px;
 }
