@@ -1,0 +1,127 @@
+:root {
+  --main-bg: #f2f1f0;
+  --btn: #59313b;
+  --footer: #ded9d5;
+  --cards: #fafafa;
+  --text: #40393b;
+  --merri: 'Merriweather', serif;
+  --sans: 'Source Sans 3', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.body {
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 23px;
+
+  background: var(--main-bg);
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  position: relative;
+
+  text-decoration: none;
+  color: var(--text);
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: var(--text);
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.link:hover::before {
+  animation: 0.2s ease-in forwards hover;
+}
+
+@keyframes hover {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 100px;
+}
+
+.header {
+  margin-bottom: 50px;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 178px 1fr 140px 25px;
+  align-items: center;
+  justify-items: stretch;
+  gap: 35px;
+
+  padding-top: 50px;
+}
+
+.logo {
+  align-self: center;
+}
+
+.logo img {
+  vertical-align: middle;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.cart::after {
+  content: '';
+  position: absolute;
+  top: -135px;
+  left: 0;
+
+  width: 25px;
+  height: 25px;
+
+  background: url('./assets/icons/bouquet.png');
+  background-size: contain;
+}
+
+.cart:hover::after {
+  z-index: -1;
+  animation: 0.35s ease-in forwards bouquet;
+}
+
+.cart:hover::before {
+  display: none;
+}
+
+@keyframes bouquet {
+  from {
+    top: -135px;
+  }
+  to {
+    top: -8px;
+  }
+}
