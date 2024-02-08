@@ -48,8 +48,11 @@ img {
   margin-bottom: 106px;
 }
 
-.nav {
+.nav,
+.footer {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -117,9 +120,4 @@ img {
   font-size: 22px;
   line-height: 150%;
   font-weight: 600;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
 }
