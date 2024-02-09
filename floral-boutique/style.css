@@ -23,6 +23,7 @@
 
 .list {
   list-style: none;
+  padding: 0;
 }
 
 .link {
@@ -32,7 +33,7 @@
   color: var(--text);
 }
 
-.link::before {
+.menu-link::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -44,11 +45,11 @@
   background-color: var(--text);
 }
 
-.link:hover {
+.menu-link:hover {
   cursor: pointer;
 }
 
-.link:hover::before {
+.menu-link:hover::before {
   animation: 0.2s ease-in forwards hover;
 }
 
@@ -134,6 +135,8 @@
   display: grid;
   grid-template-rows: 350px 60px 1fr 70px;
   gap: 50px;
+
+  margin-bottom: 80px;
 }
 
 .custom-select {
@@ -181,25 +184,7 @@
   background-color: DodgerBlue;
 }
 
-/* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: '';
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
-
-/* style the items (options), including the selected item: */
+/* style the items (options), including the selected item: 
 .select-items div,
 .select-selected {
   color: #ffffff;
@@ -209,7 +194,6 @@
   cursor: pointer;
 }
 
-/* Style items (options): */
 .select-items {
   position: absolute;
   background-color: DodgerBlue;
@@ -219,7 +203,6 @@
   z-index: 99;
 }
 
-/* Hide the items when the select box is closed: */
 .select-hide {
   display: none;
 }
@@ -227,4 +210,103 @@
 .select-items div:hover,
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
+}
+*/
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.card {
+  min-width: 380px;
+  padding: 30px;
+
+  background-color: var(--cards);
+}
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 320px;
+}
+
+.card-img {
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-family: var(--merri);
+  font-size: 22px;
+  color: var(--text);
+}
+
+.card-price {
+  margin-bottom: 15px;
+
+  font-size: 18px;
+}
+
+.card-btn {
+  display: flex;
+  justify-content: center;
+
+  min-width: 200px;
+  padding: 12px;
+
+  color: var(--cards);
+
+  background-color: var(--btn);
+  border: none;
+}
+
+.card-btn:hover {
+  cursor: pointer;
+  animation: 0.35s linear forwards change-color;
+}
+
+@keyframes change-color {
+  0% {
+    background-color: var(--btn);
+  }
+  5% {
+    background-image: linear-gradient(to right, var(--text) 5%, var(--btn) 5%, var(--btn) 100%);
+  }
+  15% {
+    background-image: linear-gradient(to right, var(--text) 15%, var(--btn) 15%, var(--btn) 100%);
+  }
+  25% {
+    background-image: linear-gradient(to right, var(--text) 25%, var(--btn) 25%, var(--btn) 100%);
+  }
+  35% {
+    background-image: linear-gradient(to right, var(--text) 35%, var(--btn) 135%, var(--btn) 100%);
+  }
+  50% {
+    background-image: linear-gradient(to right, var(--text) 50%, var(--btn) 50%, var(--btn) 100%);
+  }
+  65% {
+    background-image: linear-gradient(to right, var(--text) 65%, var(--btn) 65%, var(--btn) 100%);
+  }
+  80% {
+    background-image: linear-gradient(to right, var(--text) 80%, var(--btn) 80%, var(--btn) 100%);
+  }
+  100% {
+    background-color: var(--text);
+  }
+}
+
+.btn_more {
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  min-width: 380px;
+  padding: 24px;
+
+  font-size: 16px;
 }
