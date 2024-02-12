@@ -224,6 +224,11 @@
   padding: 30px;
 
   background-color: var(--cards);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px 5px var(--text);
 }
 
 .card-link {
@@ -263,6 +268,7 @@
 
   background-color: var(--btn);
   border: none;
+  transition: 0.3s;
 }
 
 .card-btn:hover {
@@ -309,4 +315,41 @@
   padding: 24px;
 
   font-size: 16px;
+  color: var(--text);
+
+  border-color: var(--btn);
+  border-radius: 10px;
+  background-color: var(--main-bg);
+}
+
+.btn_more:hover {
+  background-color: var(--cards);
+  cursor: pointer;
+}
+
+.footer {
+  padding: 80px;
+
+  background-color: var(--footer);
+}
+
+.nav_footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.social-img {
+  vertical-align: middle;
+}
+
+.footer .wrapper {
+  min-height: auto;
 }
