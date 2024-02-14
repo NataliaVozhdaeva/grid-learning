@@ -6,6 +6,7 @@ const cards = document.querySelectorAll('.card');
 let filters = {
   category: [],
   prices: [],
+  flowers: [],
 };
 
 const filterFunction = (e) => {
@@ -24,24 +25,24 @@ const filterFunction = (e) => {
 
 category.addEventListener('click', (e) => {
   if (e.target !== category && e.target !== prices && e.target !== flowers) {
-    filters.category = e.target.value;
-  }
+    filters.category = e.target.value === 'all' ? [] : e.target.value;
 
-  filterFunction(e);
+    filterFunction(e);
+  }
 });
 
 prices.addEventListener('click', (e) => {
   if (e.target !== category && e.target !== prices && e.target !== flowers) {
-    filters.prices = e.target.value;
-  }
+    filters.prices = e.target.value === 'all' ? [] : e.target.value;
 
-  filterFunction(e);
+    filterFunction(e);
+  }
 });
 
 flowers.addEventListener('click', (e) => {
   if (e.target !== category && e.target !== prices && e.target !== flowers) {
-    filters.flowers = e.target.value;
-  }
+    filters.flowers = e.target.value === 'all' ? [] : e.target.value;
 
-  filterFunction(e);
+    filterFunction(e);
+  }
 });
