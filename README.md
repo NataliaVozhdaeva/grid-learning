@@ -9,3 +9,8 @@
 
   - level: easy
   - [deploy](https://nataliavozhdaeva.github.io/grid-learning/travel-blog/)
+
+- Case 3 - **Floral-boutique**
+
+  - level: easy
+  - [deploy](https://nataliavozhdaeva.github.io/grid-learning/floral-boutique/)
