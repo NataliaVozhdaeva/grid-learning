@@ -1,0 +1,77 @@
+:root {
+  --black: #211e1d;
+  --bg: #f7f6f5;
+  --brown: #2a1506;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.header {
+  padding: 50px 50px;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 20px;
+  justify-items: center;
+}
+
+.logo svg {
+  vertical-align: middle;
+  fill: var(--black);
+}
+
+.logo:hover svg {
+  mask: url('./assets/logotype.svg') 50% 50% no-repeat;
+  background-image: linear-gradient(to right, var(--brown) 90px, transparent 115px, var(--brown) 155px);
+  background-size: 200px 36px;
+  background-position-x: 0;
+  fill-opacity: 0;
+  cursor: pointer;
+  animation: blick 0.8s linear normal forwards;
+}
+
+@keyframes blick {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 140%;
+  }
+}
+
+.menu,
+.accaunt {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+}
+
+.menu {
+  gap: 30px;
+}
+
+.accaunt {
+  gap: 25px;
+}
+
+.accaunt-link svg {
+  vertical-align: middle;
+}
