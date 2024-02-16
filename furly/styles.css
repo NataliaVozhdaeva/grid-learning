@@ -96,7 +96,6 @@ body {
 }
 
 .accaunt-link__favourite svg {
-  vertical-align: middle;
   fill: var(--bg);
 }
 
@@ -108,7 +107,27 @@ body {
   background-position-y: 30px;
   fill-opacity: 0;
   cursor: pointer;
-  animation: fill 0.8s linear forwards;
+  animation: fill 0.4s linear forwards;
+}
+
+.accaunt-link__sign-in svg {
+  fill: var(--bg);
+  stroke: var(--black);
+}
+
+.accaunt-link__sign-in::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: 0;
+
+  width: 9px;
+  height: 50%;
+  background-color: var(--bg);
+}
+
+.accaunt-link__sign-in:hover .entrance {
+  transform: translateX(20px);
 }
 
 @keyframes fill {
