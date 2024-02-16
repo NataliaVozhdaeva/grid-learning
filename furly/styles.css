@@ -1,12 +1,14 @@
 :root {
   --black: #211e1d;
   --bg: #f7f6f5;
-  --brown: #2a1506;
+  --brown: #61300d;
 }
 
 * {
   margin: 0;
   padding: 0;
+
+  transition: 0.3s;
 }
 
 .link {
@@ -45,16 +47,7 @@ body {
   background-position-x: 0;
   fill-opacity: 0;
   cursor: pointer;
-  animation: blick 0.8s linear normal forwards;
-}
-
-@keyframes blick {
-  from {
-    background-position-x: 0;
-  }
-  to {
-    background-position-x: 140%;
-  }
+  animation: blick 0.8s linear;
 }
 
 .menu,
@@ -68,10 +61,79 @@ body {
   gap: 30px;
 }
 
+.menu-link {
+  position: relative;
+}
+
+.menu-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: var(--brown);
+}
+
+.menu-link:hover {
+  color: var(--brown);
+  cursor: pointer;
+}
+
+.menu-link:hover::before {
+  animation: underline 0.2s ease-in forwards;
+}
+
 .accaunt {
   gap: 25px;
 }
 
-.accaunt-link svg {
+.accaunt-link {
+  position: relative;
   vertical-align: middle;
+}
+
+.accaunt-link__favourite svg {
+  vertical-align: middle;
+  fill: var(--bg);
+}
+
+.accaunt-link__favourite:hover svg {
+  mask: url('./assets/favourite.svg');
+  background-image: linear-gradient(to top, var(--brown), var(--brown));
+  background-repeat: no-repeat;
+  background-size: 26px 26px;
+  background-position-y: 30px;
+  fill-opacity: 0;
+  cursor: pointer;
+  animation: fill 0.8s linear forwards;
+}
+
+@keyframes fill {
+  from {
+    background-position-y: 30px;
+  }
+  to {
+    background-position-y: 0;
+  }
+}
+
+@keyframes blick {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 140%;
+  }
+}
+
+@keyframes underline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
