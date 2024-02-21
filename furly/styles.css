@@ -130,6 +130,34 @@ body {
   transform: translateX(20px);
 }
 
+.accaunt-link__cart:hover .firstlap {
+  transform-origin: center right;
+  animation: openBoxRight 0.3s linear forwards;
+}
+
+.accaunt-link__cart:hover .seclap {
+  transform-origin: center left;
+  animation: openBoxLeft 0.3s linear forwards 0.2s;
+}
+
+@keyframes openBoxLeft {
+  from {
+    rotate: z 0deg;
+  }
+  to {
+    rotate: z -25deg;
+  }
+}
+
+@keyframes openBoxRight {
+  from {
+    rotate: z 0deg;
+  }
+  to {
+    rotate: z 25deg;
+  }
+}
+
 @keyframes fill {
   from {
     background-position-y: 30px;
